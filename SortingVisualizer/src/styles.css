@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "DM Serif Display", serif;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(61, 224, 249);
+  --flasher: flasher;
+}
+
+.array {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+span {
+  text-align: center;
+  border: 1px solid black;
+  background-color: initial;
+}
+
+.navbar {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  background-color: #0af;
+  animation: color-change-reverse2 10s ease infinite forwards;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.btn-list {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+  padding: 4px 4px;
+}
+
+.btn:hover {
+  background-color: #f85a7a;
+  border-radius: 20px;
+  padding: 4px 4px;
+}
+
+.btn:focus {
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    top: 0;
+    background-color: #0af;
+    animation: color-change-reverse2 10s ease infinite forwards;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .btn {
+    font-size: 1.1rem;
+    color: black;
+  }
+  span {
+    text-align: center;
+    border: 1px solid rgb(129, 75, 255);
+    background-color: initial;
+  }
+}
+
+@keyframes color-change-reverse2 {
+  from {
+    background-color: #ed4264;
+  }
+
+  50% {
+    background-color: #f63e63;
+  }
+
+  100% {
+    background-color: #ed4264;
+  }
+}
+
+@keyframes flasher {
+  from {
+    background-color: #a88beb;
+  }
+
+  50% {
+    background-color: #c3acf8;
+  }
+  100% {
+    background-color: #a88beb;
+  }
+}

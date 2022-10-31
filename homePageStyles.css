@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  font-family: "DM Serif Display", serif;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3586ff;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 5rem;
+  text-align: center;
+  z-index: 200;
+  cursor: default;
+}
+
+.title2 {
+  z-index: 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+}
+
+.wave1 {
+  animation: wave 5s linear infinite;
+  z-index: 100;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.end {
+  background-color: #fff;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+}
+
+.treeVisualizer {
+  width: 45%;
+  height: 100%;
+  border-radius: 100px;
+  animation: color-change-reverse 8s linear infinite, flasher 4s ease infinite;
+}
+
+.sortingVisualizer {
+  width: 45%;
+  height: 100%;
+  border-radius: 100px;
+
+  animation: color-change 8s linear infinite, flasher 4s ease infinite;
+}
+
+.treeVisualizer:hover {
+  transform: 1s;
+
+  animation: color-change-purple 8s linear infinite, flasher 4s ease infinite;
+}
+
+.sortingVisualizer:hover {
+  transform: 1s;
+  animation: color-change-purple 8s linear infinite, flasher 4s ease infinite;
+}
+
+.mainDivs {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    z-index: 200;
+    cursor: default;
+  }
+  .title2 {
+    z-index: 0;
+  }
+  .btn3 {
+    font-size: 2rem;
+  }
+  .treeVisualizer {
+    width: 45%;
+    height: 80%;
+    border-radius: 100px;
+    animation: color-change-reverse 8s linear infinite, flasher 4s ease infinite;
+  }
+
+  .sortingVisualizer {
+    width: 45%;
+    height: 80%;
+    border-radius: 100px;
+    animation: color-change 8s linear infinite, flasher 4s ease infinite;
+  }
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes color-change {
+  from {
+    background-color: #ed4264;
+  }
+
+  50% {
+    background-color: #f2ff00;
+  }
+
+  100% {
+    background-color: #ed4264;
+  }
+}
+@keyframes color-change-reverse {
+  from {
+    background-color: #f2ff00;
+  }
+
+  50% {
+    background-color: #ed4264;
+  }
+
+  100% {
+    background-color: #f2ff00;
+  }
+}
+
+@keyframes flasher {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zIndexer {
+  from {
+    z-index: 0;
+  }
+
+  50% {
+    z-index: 200;
+  }
+  to {
+    z-index: 0;
+  }
+}
+
+@keyframes color-change-purple {
+  from {
+    background-color: #ee82ee;
+  }
+
+  50% {
+    background-color: #eb5aeb;
+  }
+  100% {
+    background-color: #ee82ee;
+  }
+}

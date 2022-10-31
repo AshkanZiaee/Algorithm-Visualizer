@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W2W76F0BYM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W2W76F0BYM");
+    </script>
+    <title>Algo Visualize</title>
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <script src="src/index.js" defer></script>
+
+  <body scroll="no" style="overflow: hidden; height: 100%">
+    <nav class="nav-top">
+      <ul class="btn-list">
+        <li><a class="btn nav-btn" id="emptyTree" href="#">Build a Tree</a></li>
+        <li>
+          <a class="btn nav-btn" id="randomSearch" href="#"
+            >Visualize Search Algorithm</a
+          >
+        </li>
+        <li><a class="btn nav-btn" href="https://ziaee.io/">About</a></li>
+      </ul>
+    </nav>
+    <form
+      onkeydown="return event.key != 'Enter';"
+      class="button-sections desktop"
+      onsubmit="return false"
+    >
+      <div class="left-side">
+        <div class="custom-btn">
+          <div class="button-container">
+            <span class="text-inside-btn">Specific Search!</span>
+            <span class="text-inside-btn-lower text-inside-btn-lower-desktop"
+              >(you can also click on numbers to see how the search algorithm
+              works)</span
+            >
+            <input
+              class="number-form"
+              id="searchNumber"
+              name="searchNumber searchNumber"
+              placeholder="16"
+              type="number"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              min="0"
+              max="99"
+              maxlength="2"
+            />
+            <button class="text-inside-search-btn massive">Search!</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="custom-btn2">
+          <div class="button-container">
+            <span class="text-inside-btn">Add Number!</span>
+            <span class="text-inside-btn-lower"
+              >(you can add more numbers to the tree)</span
+            >
+            <input
+              class="number-form2"
+              id="addNumber"
+              name="addNumber"
+              placeholder="27"
+              type="number"
+              min="0"
+              max="99"
+              maxlength="2"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            />
+            <button class="text-inside-add-btn2 massive">Add!</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="container"></div>
+    <form
+      onkeydown="return event.key != 'Enter';"
+      class="button-sections phone"
+      onsubmit="return false"
+    >
+      <div class="left-side">
+        <div class="custom-btn">
+          <div class="button-container-phone">
+            <div class="text-container">
+              <span class="text-inside-btn">Specific Search!</span>
+              <span class="text-inside-btn-lower"
+                >(see how the search algorithm works)</span
+              >
+            </div>
+            <div class="form-and-btn-container">
+              <input
+                class="number-form"
+                id="searchNumber-phone"
+                name="searchNumber searchNumber-phone"
+                placeholder="16"
+                type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                min="0"
+                max="99"
+                maxlength="2"
+              />
+              <button
+                class="text-inside-search-btn text-inside-search-btn-phone massive"
+              >
+                Search!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="custom-btn2">
+          <div class="button-container-phone">
+            <div class="text-container">
+              <span class="text-inside-btn">Add Number!</span>
+              <span class="text-inside-btn-lower"
+                >(you can add more numbers to the tree)</span
+              >
+            </div>
+            <div class="form-and-btn-container">
+              <input
+                class="number-form2"
+                id="addNumber-phone"
+                name="addNumber addNumber-phone"
+                placeholder="27"
+                type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                min="0"
+                max="99"
+                maxlength="2"
+              />
+              <button
+                class="text-inside-add-btn2 text-inside-add-btn2-phone massive"
+              >
+                Add!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
